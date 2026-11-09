@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio-Luis Mario Hernández</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="icon" href="pinwinoicon.png">
+
+
+
+    <script type="text/javascript" src="portfolio.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-neutral-900" id="inicio">
+    <header class="bg-neutral-900 z-20">
+        <div class="relative z-20">
+            <div class="px-6 lg:container md:px-12 lg:mx-auto lg:px-6 lg:py-4">
+                <div class="flex items-center justify-between">
+                    <div class="lg:relative z-20 top-0 fixed">
+                        <a class="flex justify-center items-center" href="index.html">
+                            <img src="pinwino.png" alt="logos" class="w-32" />
+                            <h1 class="text-neutral-100">Luis Hernández</h1>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center justify-end ">
+                        <input type="checkbox" name="hamburger" id="hamburger" class="peer" hidden />
+                        <label for="hamburger"
+                            class="peer-checked:hamburger top-14 right-10 fixed lg:relative z-20  block cursor-pointer  lg:hidden">
+                            <div aria-hidden="true" class="m-auto h-0.5 w-6 rounded bg-sky-100 transition duration-300">
+                            </div>
+                            <div aria-hidden="true"
+                                class="m-auto mt-2 h-0.5 w-6 rounded bg-sky-100 transition duration-300"></div>
+                        </label>
+
+                        <div
+                            class="fixed inset-0 w-[calc(100%-4.5rem)] translate-x-[-100%] border-r bg-neutral-900 shadow-xl transition duration-300 peer-checked:translate-x-0 lg:static lg:w-auto lg:translate-x-0 lg:border-r-0 lg:shadow-none">
+                            <div class="flex h-full flex-col justify-between lg:flex-row lg:items-center">
+                                <ul
+                                    class="space-y-8 px-6 pt-32 text-neutral-100 md:px-12 lg:flex lg:space-x-12 lg:space-y-0 lg:pt-0">
+                                    <!-- <li>
+                                        <a href="#inicio"
+                                            class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:bg-cyan-900">
+                                            <span class="relative text-blue-100">Home</span>
+                                        </a>
+                                    </li> -->
+                                    <li>
+                                        <a href="#aboutme"
+                                            class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-900 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                                            <span class="relative">About me</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#projects"
+                                            class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-900 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                                            <span class="relative">Projects</span>
+                                        </a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="#services"
+                                            class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-900 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                                            <span class="relative">Services</span>
+                                        </a>
+                                    </li> -->
+                                </ul>
+
+                                <button
+                                    class="border-t px-6 py-8 md:px-12 md:py-16 lg:border-l lg:border-t-0 lg:py-0 lg:pl-6 lg:pr-0 ">
+                                    <a onclick="formularioemail()"
+                                        class="block rounded-full bg-gradient-to-r from-sky-600 to-cyan-400 px-6 py-3 text-center text-white cursor-pointer duration-200 hover:scale-110">
+                                        Contact me</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="m-auto max-w-screen-xl bg-neutral-800 text-neutral-300 pb-10">
+        <div class="ml-10 mr-10 pt-32 lg:mt-0 lg:pt-0 md:grid grid-cols-2 gap-10 ">
+            <div>
+                <figure class="flex items-center justify-center ml-11 mb-10">
+                    <img src="eu.png" alt="" />
+                </figure>
+            </div>
+
+
+
+
+            <div class="flex justify-center items-center pt-10">
+                <div class="flex flex-col text-align">
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ">— Software developer —</p>
+                    <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Programming is learning,
+                        experimenting, making
+                        mistakes, correcting and evolving.</p>
+
+                    <br />
+
+                    <div class="flex justify-center items-center">
+                        <a href="CVdeloitte.pdf" download><button type="button" class="button">
+
+                                <span class="button__text" style="font-size: 20px;">Download CV</span>
+                                <span class="button__icon"><svg class="svg" data-name="Layer 2"
+                                        id="bdd05811-e15d-428c-bb53-8661459f9307" viewBox="0 0 35 35"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
+                                        </path>
+                                        <path
+                                            d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z">
+                                        </path>
+                                        <path
+                                            d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
+                                        </path>
+                                    </svg></span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="mt-10 mb-10">
+                <h2 class="font-bold  text-3xl mb-4" id="aboutme">About me</h2>
+                <p>Hi, I'm Luis Mario. I am Portuguese, born in Venezuela. I immigrated to Portugal along with my parents and sister in 2019. I completed my high school education in Soure (Agrupamento de Escolas Martinho Arias), where I have been living since I arrived in this country. Due to my birthplace, I speak Spanish, Portuguese, and English (intermediate). I am passionate about computing and would like to further my education in this field to pursue a professional career in the future.</p>
+            </div>
+
+            <div class="flex justify-center items-center">
+                <div>
+                    <div
+                        class="group relative flex max-w-40 flex-col items-center overflow-hidden rounded-xl bg-black p-4 text-center shadow-xl transition-all duration-500 hover:shadow-2xl">
+                        <div class="text-gray-500 transition-all group-hover:scale-105">
+                            <figure class="h-16 w-16" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                                fill="none">
+                                <img src="https://media.tenor.com/RcX3hUY425kAAAAi/toothless-dragon-toothless.gif"
+                                    alt="" srcset="" />
+                            </figure>
+                        </div>
+                        <div class="transition-all delay-200 duration-500 group-hover:pb-10">
+                            <h2 class="font-semibold text-blue-500">Luis Mario</h2>
+                            <h3 class="text-sm text-gray-500">@senior_developer</h3>
+                        </div>
+                        <div
+                            class="absolute -bottom-full flex w-full items-center justify-evenly gap-2 transition-all delay-200 duration-500 group-hover:bottom-3">
+                            <div
+                                class="flex gap-3 rounded-full bg-gray-700 p-1 text-2xl text-white shadow-sm transition-all delay-200 duration-500 hover:p-2">
+                                <a class="transition-all delay-200 duration-500 hover:scale-110"
+                                    href="https://github.com/LMhdez" target="_blank">
+                                    <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 1024 1024">
+                                        <path
+                                            d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="transition-all delay-200 duration-500 hover:scale-110"
+                                    href="mailto:a2023135575@alunos.estgoh.ipc.pt">
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <path d="M22 6l-10 7L2 6"></path>
+                                    </svg>
+                                </a>
+                                <a class="transition-all delay-200 duration-500 hover:scale-110"
+                                    href="https://www.linkedin.com/in/luis-mario-hernández/" target="_blank">
+                                    <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 960 1000">
+                                        <path
+                                            d="M480 20c133.333 0 246.667 46.667 340 140s140 206.667 140 340c0 132-46.667 245-140 339S613.333 980 480 980c-132 0-245-47-339-141S0 632 0 500c0-133.333 47-246.667 141-340S348 20 480 20M362 698V386h-96v312h96m-48-352c34.667 0 52-16 52-48s-17.333-48-52-48c-14.667 0-27 4.667-37 14s-15 20.667-15 34c0 32 17.333 48 52 48m404 352V514c0-44-10.333-77.667-31-101s-47.667-35-81-35c-44 0-76 16.667-96 50h-2l-6-42h-84c1.333 18.667 2 52 2 100v212h98V518c0-12 1.333-20 4-24 8-25.333 24.667-38 50-38 32 0 48 22.667 48 68v174h98">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-2 mt-10">
+                <h2 class="text-neutral-100 font-bold  text-3xl mb-4">Skills</h2>
+                <div class=" flex flex-wrap justify-around items-end space-y-10">
+
+
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+                        <img src="https://www.marinedatascience.co/img/software/logo_python.png">
+
+
+                    </figure>
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+                    </figure>
+
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://logos-download.com/wp-content/uploads/2017/07/HTML5_badge.png">
+                    </figure>
+                    <figure class="max-w-24 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="css.png" style="height: 96px;">
+                    </figure>
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://pngimg.com/uploads/letter_c/letter_c_PNG22.png">
+                    </figure>
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://pngimg.com/uploads/mysql/mysql_PNG23.png">
+                    </figure>
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img
+                            src="https://brandlogos.net/wp-content/uploads/2022/05/figma-logo_brandlogos.net_6n1pb-512x512.png">
+                    </figure>
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img
+                            src="outsystems.png">
+                    </figure>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class=" mt-10 ml-11 mb-10" id="projects">
+            <p class="text-2xl mb-10">— Curious about what I've done?</p>
+
+
+<p class="text-3xl inline">Then let me show you my</p>
+<h2 class="text-blue-500 font-bold font-serif text-3xl inline ">projects</h2>
+
+
+        </div>
+
+
+        <div class="flex flex-wrap justify-around items-end space-y-10 " style="max-width: 70%; margin: auto auto">
+
+            <div class="flex justify-center items-center">
+                <div class="card">
+                    <div class="card-info" style="background-image: url(minesweeper.png); background-size:cover; ">
+                        <p class="title bg-neutral-900">Minesweeper in C</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="flex justify-center items-center">
+
+                <div class="card">
+                    <div class="card-info" style="background-image: url(agenda.png);background-size:cover; ">
+                        <p class="title bg-neutral-900" style="text-align: center;">Personal phone book in python</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+
+                <a href="diagrama.drawio.png">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(diagrama.drawio.png); background-size:cover;background-position: center;">
+                            <p class="title bg-neutral-900" style="text-align: center;">Database for Coimbra forum in
+                                sql
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="flex justify-center items-center">
+                <a href="avioes/avioes.html">
+                    <div class="card">
+                        <div class="card-info" style="background-image: url(fpaero.png); background-size:cover">
+                            <p class="title bg-neutral-900" style="text-align: center;">Website for FPA</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+                <a
+                    href="https://www.figma.com/proto/nb1o9AuH8N5u7rp3HdTIND/Concertix-Trabalho-de-IU-(1)?type=design&t=U4hnyAim36b0YJrq-1&scaling=scale-down&page-id=0%3A1&node-id=1-6&mode=design">
+                    <div class="card">
+                        <div class="card-info" style="background-image: url(concertix.png); background-size:cover;">
+                            <p class="title bg-neutral-900" style="text-align: center;">Concertix app (figma prototype)
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+            <div class="flex justify-center items-center">
+                <a
+                    href="https://www.figma.com/proto/Vux5BB4UzBpUIGIso5924N/sumos?type=design&node-id=1-3&t=X7GsFkVB215dTOPL-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(pennyjuice.png); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">Pennyjuice website (figma
+                                prototype)
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+                <div class="card">
+                    <div class="card-info"
+                        style="background-image: url(https://pluspng.com/img-png/python-logo-png-open-2000.png); background-size:cover;background-position: center; ">
+                        <p class="title bg-neutral-900" style="text-align: center;">Python program for validating
+                            applications</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+
+                <div class="card">
+                    <div class="card-info"
+                        style="background-image: url(https://pluspng.com/img-png/python-logo-png-open-2000.png); background-size:cover;background-position: center; ">
+                        <p class="title bg-neutral-900" style="text-align: center;">Python program that calculates the
+                            areas of regular polygons</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center items-center">
+
+                <a href="laberinto/laberinto.html">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(laberinto.PNG); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">Thematic maze game using JS</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="calculadora/calculadora.html">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(calculator.PNG); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">Functional calculator using
+                                HTML, CSS and JS</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="blackjack/blackjack.html">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(blackjack.png); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">BlackJack game using
+                                HTML, CSS and JS</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="pokedex/pokedex.html">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(pokedex.png); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">Pokedex using API</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- <div class=" mt-10 ml-11" id="services">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-10">— Got a project brewing in that brilliant mind? </p>
+
+
+            <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Let's uncover how I can sprinkle some magic on it and make it shine!</p>
+
+            <a href="budget.html">
+                <button class="continue-application mt-4 ">
+                    <div>
+                        <div class="pencil"></div>
+                        <div class="folder">
+                            <div class="top">
+                                <svg viewBox="0 0 24 27">
+                                    <path
+                                        d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="paper"></div>
+                        </div>
+                    </div>
+                    Estimate project
+                </button>
+            </a>
+        </div> -->
+
+
+        <form class="colorful-form fixed z-30" id="formulariof"
+            onsubmit="event.preventDefault(); enviaremailqualquer();">
+            <button class="close-button hover:scale-150 " onclick="fecharFormulario()">x</button>
+            <div class="form-group">
+                <label class="form-label">Name:</label>
+                <input required placeholder="Enter your name" class="form-input" type="text" id="nome">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Subject:</label> <input required placeholder="Enter the subject"
+                    class="form-input" name="Subject" id="subject" type="text">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Message:</label> <textarea required placeholder="Enter your message"
+                    class="form-input" name="message" id="message" aria-required="true"></textarea>
+            </div>
+
+            <button class="form-button" type="submit">Send Email</button>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="bg-neutral-900 text-neutral-400 text-center pt-1 pb-1 ">
+        <p>Copyright © Luis Hernández - 2024</p>
+
+        <button>
+            <a href="#inicio" class=" bg-neutral-800 ">^</a>
+        </button>
+    </footer>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = document.querySelectorAll('.peer-checked\\:hamburger ~ .fixed');
+
+            menuItems.forEach(function (menuItem) {
+                menuItem.addEventListener('click', function () {
+                    const hamburgerCheckbox = document.getElementById('hamburger');
+                    if (hamburgerCheckbox.checked) {
+                        hamburgerCheckbox.checked = false;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Calculator-Luis Mario Hernández</title>
+    <link rel="icon" href="pinwinoicon.png">
+
+    <script type="text/javascript" src="portfolio.js"></script>
+    <link rel="stylesheet" href="portfolio.css" />
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+
+<body class="bg-neutral-900">
+    <header class="bg-neutral-900 sticky top-0 z-20">
+        <div class="relative z-20">
+            <div class="px-6 lg:container md:px-12 lg:mx-auto lg:px-6 lg:py-4">
+                <div class="flex items-center justify-between">
+                    <div class="relative z-20">
+                        <a class="flex justify-center items-center" href="index.html">
+                            <img src="pinwino.png" alt="logos" class="w-32" />
+                            <h1 class="text-neutral-100">Luis Hernández</h1>
+                        </a>
+                    </div>
+                    <div>
+                        <button class="cursor-pointer duration-200 hover:scale-125 active:scale-100" title="Go Back"
+                            onclick="restart()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="white"
+                                class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z">
+                                </path>
+                                <path fill-rule="evenodd"
+                                    d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z">
+                                </path>
+                            </svg>
+                            <p class="text-neutral-100">Restart</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="m-auto max-w-screen-xl bg-neutral-800 text-neutral-300 pb-10 pt-7">
+        <div class="ml-10 mr-10 mt-0 grid grid-cols-2 gap-10 items-center justify-center">
+            <div class="col-span-2 text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pb-10">Budget Calculator</h2>
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl " name="orcamento">Estimated
+                    value:</p>
+            </div>
+
+        </div>
+
+
+        <form id="formulariop" onsubmit="event.preventDefault(); principal();">
+
+            <h3 class="ml-10 my-10">What type of solution are you thinking of?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">Website <br>+4000 <input type="radio" name="tipop"
+                            value="0" required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Mobile App <input type="radio" name="tipop"
+                            value="1"></label>
+                </div>
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button type="submit" class="btn-class-name">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+
+        </form>
+
+
+        <form id="formulariod" onsubmit="event.preventDefault(); formd();">
+
+            <h3 class="ml-10 my-10">What type of design do you want?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">Minimalist <br>+3000 <input type="radio"
+                            name="tipod" value="0" required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Modern <br>+9000<input type="radio" name="tipod"
+                            value="1"></label>
+                </div>
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name" type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+
+
+        </form>
+
+        <form id="formulario3" onsubmit="event.preventDefault(); form3();">
+
+            <h3 class="ml-10 my-10">Which type of authentication do you want?</h3>
+
+            <div class=" flex flex-row justify-between pt-7 flex-wrap mx-10">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">None <br> <input type="radio" name="tipo3"
+                            value="0" required> </label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Basic <br>+3000<input type="radio" name="tipo3"
+                            value="1"></label>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Social Media<br>+6000 <input type="radio"
+                            name="tipo3" value="2"></label>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Integrated with existing system <br>+6000 <input
+                            type="radio" name="tipo3" value="3"></label>
+                </div>
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name " type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+
+        <form id="formulario4" onsubmit="event.preventDefault(); form4();">
+
+            <h3 class="ml-10 my-10">Do you want to include media features?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">None <br> <input type="radio" name="tipo4"
+                            value="0" required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Audio or video playback/recording<br>+5000 <input
+                            type="radio" name="tipo4" value="1"></label>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Live streaming or more complex media
+                        features<br>+10000
+                        <input type="radio" name="tipo4" value="2"></label>
+                </div>
+
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name " type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+        <form id="formulario5" onsubmit="event.preventDefault(); form5();">
+
+            <h3 class="ml-10 my-10">Do you want to include utility features in your website?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">None <br> <input type="radio" name="tipo5"
+                            value="0" required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Maps&Location<br>+5000 <input type="radio"
+                            name="tipo5" value="1"></label>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Notifications<br>+2500<input type="radio"
+                            name="tipo5" value="2"></label>
+                </div>
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Booking and ratings<br>+7500<input type="radio"
+                            name="tipo5" value="3"></label>
+                </div>
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Online Shop<br>+7500<input type="radio"
+                            name="tipo5" value="4"></label>
+                </div>
+
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name " type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+        <form id="formulario5t" onsubmit="event.preventDefault(); form5();">
+
+            <h3 class="ml-10 my-10">Do you want to include utility features in your app?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">None <br> <input type="radio" name="tipo5t"
+                            value="0" required></label>
+                </div>
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">Connetion to other devices
+                        (wifi/bluetooth/...)<br>+5000 <input type="radio" name="tipo5t" value="9"></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Maps&Location <br>+5000<input type="radio"
+                            name="tipo5t" value="1"></label>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Notifications<br>+2500<input type="radio"
+                            name="tipo5t" value="2"></label>
+                </div>
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Booking and ratings<br>+7500<input type="radio"
+                            name="tipo5t" value="3"></label>
+                </div>
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Online Shop<br>+7500<input type="radio"
+                            name="tipo5t" value="4"></label>
+                </div>
+
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name " type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+        <form id="formulario6" onsubmit="event.preventDefault(); form6();">
+
+            <h3 class="ml-10 my-10">Should work with multi-languages?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">No <br> <input type="radio" name="tipo6" value="0"
+                            required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Yes <br>+7500<input type="radio" name="tipo6"
+                            value="1"></label>
+                </div>
+
+
+
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name " type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+
+
+        <form id="formulario7" onsubmit="event.preventDefault(); form7();">
+
+            <h3 class="ml-10 my-10">How many forms?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">None <br> <input type="radio" name="tipo7"
+                            value="0" required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">1<br>+1000<input type="radio" name="tipo7"
+                            value="1"></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">2 to 5<br>+2500<input type="radio" name="tipo7"
+                            value="2"></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">6 to 10<br>+5000<input type="radio" name="tipo7"
+                            value="3"></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">More than 11<br>+12500<input type="radio"
+                            name="tipo7" value="4"></label>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name " type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+        <form id="formulario8" onsubmit="event.preventDefault(); form8();">
+
+            <h3 class="ml-10 my-10">Do you want a back-office to change content on the website?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">No <br> <input type="radio" name="tipo8" value="0"
+                            required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Yes<br>+10000 <input type="radio" name="tipo8"
+                            value="1"></label>
+                </div>
+
+            </div>
+
+
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name " type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+
+
+
+        </form>
+
+
+
+
+        <form id="formulario9" onsubmit="event.preventDefault(); form9();">
+
+            <h3 class="ml-10 my-10">Should work offline?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">No <br> <input type="radio" name="tipo9" value="0"
+                            required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Yes <br>+1000<input type="radio" name="tipo9"
+                            value="1"></label>
+                </div>
+
+            </div>
+
+
+
+
+
+
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name " type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+
+        <form id="formularioOS" onsubmit="event.preventDefault(); formd();">
+
+            <h3 class="ml-10 my-10">What operating system do you want?</h3>
+
+            <div class=" flex flex-row justify-around pt-7">
+
+
+
+                <div class="flex items-center justify-center ">
+                    <label class="op bg-neutral-900 text-neutral-100">Android <br>+4000 <input type="radio"
+                            name="tipoOS" value="0" required></label>
+                </div>
+
+
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">iOS<br>+4000<input type="radio" name="tipoOS"
+                            value="1"></label>
+                </div>
+                <div class="flex items-center justify-center">
+                    <label class="op bg-neutral-900 text-neutral-100">Both<br>+7000<input type="radio" name="tipoOS"
+                            value="2"></label>
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="flex items-center justify-end mx-16 my-10">
+                <button class="btn-class-name" type="submit">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <form class="colorful-form" id="formulariof" onsubmit="event.preventDefault(); enviaremail();">
+            <div class="form-group">
+                <label class="form-label">Name:</label>
+                <input required placeholder="Enter your name" class="form-input" type="text" id="nome">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Email:</label> <input required placeholder="Enter your email"
+                    class="form-input" name="email" id="email" type="email">
+            </div>
+
+            <button class="form-button" type="submit">Send Email</button>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="bg-neutral-900 text-neutral-400 text-center pt-1 pb-1">
+        <p>Copyright © Luis Hernández - 2024</p>
+    </footer>
+</body>
+
+</html>
