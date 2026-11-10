@@ -529,3 +529,154 @@ footer a {
   border: none;
   outline: none;
 }
+
+/* --- Careful visual refresh: preserve the original Pinwino portfolio --- */
+:root {
+  color-scheme: dark;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a, button, input, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+label:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 4px;
+}
+
+header {
+  position: relative;
+}
+
+header img {
+  object-fit: contain;
+}
+
+main {
+  overflow: hidden;
+}
+
+.card {
+  flex: 0 1 190px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .22);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card::after {
+  opacity: .8;
+  transition: opacity .25s ease, filter .25s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 34px rgba(14, 165, 233, .18);
+}
+
+.card-info {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card .title {
+  max-width: 100%;
+  padding: .55rem .65rem;
+  line-height: 1.35;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.button {
+  background-position: center;
+  background-size: cover;
+  box-shadow: 4px 4px #dedede, 0 8px 22px rgba(0, 0, 0, .22);
+}
+
+.button:hover {
+  background-image: none;
+}
+
+.colorful-form {
+  z-index: 50;
+  width: min(400px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, .55);
+}
+
+@media (max-width: 767px) {
+  main > div:first-child {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  main > div:first-child > div:first-child figure {
+    margin-left: 0;
+  }
+
+  main > div:first-child > div:first-child img {
+    max-height: 360px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  #projects {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  main > div[style*="max-width: 70%"] {
+    max-width: calc(100% - 2rem) !important;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: min(190px, calc(100vw - 48px));
+  }
+
+  header .top-0.fixed {
+    position: absolute;
+  }
+
+  footer a {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .button {
+    width: 150px;
+  }
+
+  .card {
+    width: min(175px, calc(100vw - 48px));
+    height: 230px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
