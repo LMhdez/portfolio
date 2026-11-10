@@ -1,17 +1,21 @@
-# Portefólio — montra pública de projetos
+# Portfolio — public project showcase
 
-Este repositório apresenta uma seleção de projetos de desenvolvimento, aplicações web, jogos e infraestrutura. **Não é o código-fonte central desses projetos**: cada projeto autónomo continua no seu próprio repositório.
+This repository presents selected software, web development, game and infrastructure projects. It is a showcase, not the central source code for those projects: each independent project remains in its own repository.
 
-O site estático está em [index.html](index.html) e não necessita de dependências, build ou serviços externos para funcionar.
+The static website is [index.html](index.html). It has no build step, external runtime dependencies or third-party translation service.
 
-## Projetos em destaque
+## Languages
 
-### Produção
-- [Studio Sara Nails](https://github.com/LMhdez/StudioSaraNails) — aplicação web de gestão de um estúdio de unhas.
-- [MC Server Platform](https://github.com/LMhdez/mc-start) — portal e plataforma operacional do servidor Minecraft.
-- [MC Server Infrastructure](https://github.com/LMhdez/mc-server-infrastructure) — documentação operacional, inventário e runbooks da infraestrutura.
+The website is available in **English, Portuguese and Spanish**. English is the default language; the initial language follows the browser preference when supported. Visitors can switch languages at any time, and their choice is saved locally in the browser.
 
-### Projetos independentes
+## Featured projects
+
+### Production
+- [Studio Sara Nails](https://github.com/LMhdez/StudioSaraNails) — web application for managing a nail studio.
+- [MC Server Platform](https://github.com/LMhdez/mc-start) — Minecraft server portal and operations platform.
+- [MC Server Infrastructure](https://github.com/LMhdez/mc-server-infrastructure) — operational documentation, inventory and infrastructure runbooks.
+
+### Independent projects
 - [Aviation Website](https://github.com/LMhdez/aviation-website)
 - [Budget Calculator](https://github.com/LMhdez/budget-calculator)
 - [Blackjack](https://github.com/LMhdez/blackjack)
@@ -19,28 +23,28 @@ O site estático está em [index.html](index.html) e não necessita de dependên
 - [Calculator](https://github.com/LMhdez/calculator)
 - [Pokédex](https://github.com/LMhdez/pokedex)
 
-### Projetos académicos
+### Academic projects
 - [Movies React](https://github.com/LMhdez/moviesReact)
-- [Projeto POO — Gestão de Farmácia](https://github.com/LMhdez/projetoPOO)
-- [ProjetoIIA — Simulação multiagente](https://github.com/LMhdez/ProjetoIIA)
+- [OOP Project — Pharmacy Management](https://github.com/LMhdez/projetoPOO)
+- [ProjetoIIA — Multi-agent Simulation](https://github.com/LMhdez/ProjetoIIA)
 - [Quizzes](https://github.com/LMhdez/Quizzes)
 - [Programas](https://github.com/LMhdez/programas)
 
-## Estrutura e manutenção
+## Structure and maintenance
 
-- `index.html` — página pública do portefólio, com estilos incorporados.
-- Os projetos são apresentados por ligações aos respetivos repositórios; não se copia código para aqui.
-- A classificação distingue projetos em produção, projetos independentes e trabalhos académicos.
-- Não incluir credenciais, dados privados, configurações locais ou informação operacional sensível neste repositório.
+- `index.html` — public portfolio page, with embedded styles and translations.
+- Projects are linked to their own repositories; source code is not duplicated here.
+- Projects are grouped into production, independent and academic work.
+- Do not add credentials, private data, local configuration or sensitive operational information to this repository.
 
-## Histórico
+## History
 
-O histórico Git e os branches antigos são preservados como arquivo de origem. A página atual é uma apresentação nova e independente; não depende desses branches antigos nem altera os respetivos conteúdos.
+Existing Git history and branches are preserved as an archive. The current page is a new, independent presentation and does not modify the contents of historical branches.
 
-## Executar localmente
+## Run locally
 
-Abre `index.html` num navegador moderno. Não é necessário instalar dependências ou iniciar um servidor de desenvolvimento.
+Open `index.html` in a modern browser. No dependencies or development server are required.
 
-## Publicação
+## Publishing
 
-O repositório contém agora uma página estática na raiz do branch `main`. A disponibilidade pública através de GitHub Pages depende da configuração de publicação do repositório e deve ser confirmada separadamente; um commit, por si só, não comprova a publicação.
+The static page is in the root of the `main` branch. Public availability through GitHub Pages depends on the repository's Pages configuration and must be verified separately; a commit alone does not confirm deployment.
