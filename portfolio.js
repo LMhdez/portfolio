@@ -344,33 +344,6 @@ function form9() {
 
 }
 
-function formularioemail()
-{
-    
-    
-        var formulario = document.getElementById("formulariof");
-        
-        document.body.style.overflow = "hidden";
-
-    
-        // mostrar
-        formulario.style.display = "block";
-    
-        // centrar
-        formulario.style.position = "fixed";
-        formulario.style.top = "50%";
-        formulario.style.left = "50%";
-        formulario.style.transform = "translate(-50%, -50%)";
-    }
-    
-    function fecharFormulario() {
-        var formulariof = document.getElementById("formulariof");
-        formulariof.style.display = "none";
-        document.body.style.overflow = "visible";
-
-      }
-
-
 
 
 
@@ -574,28 +547,4 @@ function enviaremail() {
 
 
 
-function enviaremailqualquer() {
 
-
-
-    var nome = document.getElementById('nome').value;
-    var subject = document.getElementById('subject').value;
-    var message= document.getElementById('message').value;
-
-   
-    var corpoEmail = "Name: " + nome + "%0D%0AMessage: " + message;
-
-
-    var destinatario = "a2023135575@alunos.estgoh.ipc.pt";
-
-  
-
-
-    var linkEmail = "mailto:" + destinatario + "?subject=" + subject + "&body=" + corpoEmail;
-
-   
-    window.location.href = linkEmail;
-
-    var formulariof = document.getElementById("formulariof");
-    formulariof.style.display = "none";
-}
