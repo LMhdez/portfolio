@@ -552,3 +552,8 @@ main { overflow:hidden; }
 }
 @media(max-width:420px) { .button { width:150px; } .card { width:min(175px,calc(100vw - 48px)); height:230px; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
+
+
+/* Slightly crop the profile photo to hide Bg Eraser edge artefacts. */
+.photo-crop { overflow: hidden; }
+.photo-crop img { transform: scale(1.04); transform-origin: center; }
