@@ -1,218 +1,484 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of software, web development, games and infrastructure projects.">
-  <meta name="theme-color" content="#101827">
-  <title>Portfolio | LMhdez</title>
-  <style>
-    :root { color-scheme:dark; --bg:#0b1220; --panel:#131e30; --text:#edf3fb; --muted:#a9b8ca; --accent:#65d6c4; --line:#26364b; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:linear-gradient(160deg,#111d31 0%,var(--bg) 48%); color:var(--text); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:inherit; }
-    .wrap { width:min(1080px,calc(100% - 40px)); margin:auto; }
-    header { padding:48px 0 54px; border-bottom:1px solid var(--line); }
-    .topbar { display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-bottom:34px; }
-    .lang-button { border:1px solid var(--line); border-radius:999px; padding:7px 13px; color:var(--muted); background:transparent; font:inherit; font-size:.85rem; cursor:pointer; }
-    .lang-button[aria-pressed="true"] { color:var(--bg); background:var(--accent); border-color:var(--accent); font-weight:750; }
-    .lang-button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
-    .eyebrow { color:var(--accent); font-size:.82rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
-    h1 { max-width:780px; margin:12px 0; font-size:clamp(2.5rem,7vw,5rem); line-height:1.03; letter-spacing:-.055em; }
-    .intro { max-width:680px; color:var(--muted); font-size:1.12rem; }
-    nav { display:flex; flex-wrap:wrap; gap:18px; margin-top:28px; }
-    nav a { color:var(--accent); text-decoration:none; font-weight:650; }
-    main { padding:42px 0 72px; }
-    section { margin:0 0 48px; scroll-margin-top:20px; }
-    h2 { margin:0 0 8px; font-size:1.7rem; letter-spacing:-.025em; }
-    .section-intro { margin:0 0 22px; color:var(--muted); }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:16px; }
-    .card { display:flex; flex-direction:column; min-height:210px; padding:22px; background:var(--panel); border:1px solid var(--line); border-radius:16px; }
-    .tag { color:var(--accent); font-size:.76rem; font-weight:750; letter-spacing:.1em; text-transform:uppercase; }
-    h3 { margin:8px 0; font-size:1.22rem; }
-    .card p { margin:0 0 18px; color:var(--muted); }
-    .card a { margin-top:auto; width:fit-content; color:var(--accent); font-weight:700; text-decoration:none; }
-    .card a:hover, nav a:hover, footer a:hover { text-decoration:underline; }
-    footer { padding:24px 0 36px; border-top:1px solid var(--line); color:var(--muted); }
-    footer a { color:var(--accent); text-decoration:none; }
-    @media (max-width:520px) { header { padding-top:30px; } .topbar { justify-content:flex-start; margin-bottom:26px; } nav { gap:12px 18px; } }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
-  </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio-Luis Mario Hernández</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="icon" href="https://raw.githubusercontent.com/LMhdez/portfolio/first-import/pinwinoicon.png">
+
+
+
+    <script type="text/javascript" src="portfolio.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <div class="topbar" role="group" aria-label="Language">
-        <button class="lang-button" type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button class="lang-button" type="button" data-lang="pt" aria-pressed="false">PT</button>
-        <button class="lang-button" type="button" data-lang="es" aria-pressed="false">ES</button>
-      </div>
-      <div class="eyebrow" data-i18n="eyebrow">Software development portfolio</div>
-      <h1 data-i18n="heroTitle">Ideas turned into projects.</h1>
-      <p class="intro" data-i18n="intro">A selection of software, web applications, games and infrastructure projects. Each project keeps its own repository and development lifecycle.</p>
-      <nav aria-label="Main navigation">
-        <a href="#production" data-i18n="navProduction">Production</a>
-        <a href="#independent" data-i18n="navIndependent">Independent projects</a>
-        <a href="#academic" data-i18n="navAcademic">Academic</a>
-        <a href="https://github.com/LMhdez">GitHub</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <section id="production">
-      <h2 data-i18n="productionTitle">Production</h2>
-      <p class="section-intro" data-i18n="productionIntro">Projects with real-world use and operational responsibilities.</p>
-      <div class="grid">
-        <article class="card">
-          <div class="tag" data-i18n="liveApp">Live application</div>
-          <h3>Studio Sara Nails</h3>
-          <p data-i18n="nailsDesc">Web application for managing a nail studio, including services, appointments, authentication and administration.</p>
-          <a href="https://github.com/LMhdez/StudioSaraNails" data-i18n="repoLink">View repository →</a>
-        </article>
-        <article class="card">
-          <div class="tag" data-i18n="infraOps">Infrastructure &amp; operations</div>
-          <h3>MC Server Platform</h3>
-          <p data-i18n="mcDesc">Multilingual portal and operations platform for a Minecraft server, with protected controls, server status and automation.</p>
-          <a href="https://github.com/LMhdez/mc-start" data-i18n="platformLink">View platform →</a>
-        </article>
-        <article class="card">
-          <div class="tag" data-i18n="opsDocs">Operational documentation</div>
-          <h3>MC Server Infrastructure</h3>
-          <p data-i18n="infraDesc">Inventory, audits, sanitised configurations and runbooks for the Azure/VM infrastructure.</p>
-          <a href="https://github.com/LMhdez/mc-server-infrastructure" data-i18n="infraLink">View infrastructure →</a>
-        </article>
-      </div>
-    </section>
+<body class="bg-neutral-900" id="inicio">
+    <header class="bg-neutral-900 z-20">
+        <div class="relative z-20">
+            <div class="px-6 lg:container md:px-12 lg:mx-auto lg:px-6 lg:py-4">
+                <div class="flex items-center justify-between">
+                    <div class="lg:relative z-20 top-0 fixed">
+                        <a class="flex justify-center items-center" href="index.html">
+                            <img src="https://raw.githubusercontent.com/LMhdez/portfolio/first-import/pinwino.png" alt="logos" class="w-32" />
+                            <h1 class="text-neutral-100">Luis Hernández</h1>
+                        </a>
+                    </div>
 
-    <section id="independent">
-      <h2 data-i18n="independentTitle">Independent projects</h2>
-      <p class="section-intro" data-i18n="independentIntro">Applications and experiments developed outside a production context.</p>
-      <div class="grid">
-        <article class="card"><div class="tag" data-i18n="infoWebsite">Information website</div><h3>Aviation Website</h3><p data-i18n="aviationDesc">A multi-page static website focused on aviation information.</p><a href="https://github.com/LMhdez/aviation-website" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag" data-i18n="webTool">Web tool</div><h3>Budget Calculator</h3><p data-i18n="budgetDesc">A step-by-step estimator for indicative website and mobile application project costs.</p><a href="https://github.com/LMhdez/budget-calculator" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag" data-i18n="webGame">Web game</div><h3>Blackjack</h3><p data-i18n="blackjackDesc">A Blackjack game that runs directly in the browser.</p><a href="https://github.com/LMhdez/blackjack" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag" data-i18n="webGame">Web game</div><h3>Maze Game</h3><p data-i18n="mazeDesc">A maze game with keyboard and on-screen controls.</p><a href="https://github.com/LMhdez/maze-game" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag" data-i18n="webApp">Web application</div><h3>Calculator</h3><p data-i18n="calculatorDesc">A browser calculator with keyboard support and mathematical expression evaluation.</p><a href="https://github.com/LMhdez/calculator" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag" data-i18n="apiFrontend">API &amp; frontend</div><h3>Pokédex</h3><p data-i18n="pokedexDesc">A Pokémon lookup interface powered by the PokéAPI.</p><a href="https://github.com/LMhdez/pokedex" data-i18n="repoLink">View repository →</a></article>
-      </div>
-    </section>
+                    <div class="flex items-center justify-end ">
+                        <input type="checkbox" name="hamburger" id="hamburger" class="peer" hidden />
+                        <label for="hamburger"
+                            class="peer-checked:hamburger top-14 right-10 fixed lg:relative z-20  block cursor-pointer  lg:hidden">
+                            <div aria-hidden="true" class="m-auto h-0.5 w-6 rounded bg-sky-100 transition duration-300">
+                            </div>
+                            <div aria-hidden="true"
+                                class="m-auto mt-2 h-0.5 w-6 rounded bg-sky-100 transition duration-300"></div>
+                        </label>
 
-    <section id="academic">
-      <h2 data-i18n="academicTitle">Academic projects</h2>
-      <p class="section-intro" data-i18n="academicIntro">Coursework and exercises developed during my studies.</p>
-      <div class="grid">
-        <article class="card"><div class="tag">React · Vite</div><h3>Movies React</h3><p data-i18n="moviesDesc">Frontend to explore films, view details and reviews, and manage favourites.</p><a href="https://github.com/LMhdez/moviesReact" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag">Java · OOP</div><h3 data-i18n="pharmacyTitle">Pharmacy Management</h3><p data-i18n="pharmacyDesc">Console application for managing users, medicines and orders.</p><a href="https://github.com/LMhdez/projetoPOO" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag">NetLogo · AI</div><h3 data-i18n="agentsTitle">Multi-agent Simulation</h3><p data-i18n="agentsDesc">Simulation of exploring and collecting agents in an environment with resources and obstacles.</p><a href="https://github.com/LMhdez/ProjetoIIA" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag">HTML · CSS · JavaScript</div><h3>Quizzes</h3><p data-i18n="quizzesDesc">Interactive quiz template with different question modes.</p><a href="https://github.com/LMhdez/Quizzes" data-i18n="repoLink">View repository →</a></article>
-        <article class="card"><div class="tag" data-i18n="exercisesArchive">Exercises &amp; archive</div><h3>Programas</h3><p data-i18n="programasDesc">A collection of exercises, coursework and small projects from different subjects.</p><a href="https://github.com/LMhdez/programas" data-i18n="repoLink">View repository →</a></article>
-      </div>
-    </section>
-  </main>
+                        <div
+                            class="fixed inset-0 w-[calc(100%-4.5rem)] translate-x-[-100%] border-r bg-neutral-900 shadow-xl transition duration-300 peer-checked:translate-x-0 lg:static lg:w-auto lg:translate-x-0 lg:border-r-0 lg:shadow-none">
+                            <div class="flex h-full flex-col justify-between lg:flex-row lg:items-center">
+                                <ul
+                                    class="space-y-8 px-6 pt-32 text-neutral-100 md:px-12 lg:flex lg:space-x-12 lg:space-y-0 lg:pt-0">
+                                    <!-- <li>
+                                        <a href="#inicio"
+                                            class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:bg-cyan-900">
+                                            <span class="relative text-blue-100">Home</span>
+                                        </a>
+                                    </li> -->
+                                    <li>
+                                        <a href="#aboutme"
+                                            class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-900 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                                            <span class="relative">About me</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#projects"
+                                            class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-900 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                                            <span class="relative">Projects</span>
+                                        </a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="#services"
+                                            class="group relative before:absolute before:inset-x-0 before:bottom-0 before:h-2 before:origin-right before:scale-x-0 before:bg-cyan-900 before:transition before:duration-200 hover:before:origin-left hover:before:scale-x-100">
+                                            <span class="relative">Services</span>
+                                        </a>
+                                    </li> -->
+                                </ul>
 
-  <footer><div class="wrap"><span data-i18n="footer">Personal portfolio</span> · <a href="https://github.com/LMhdez">GitHub @LMhdez</a></div></footer>
+                                <button
+                                    class="border-t px-6 py-8 md:px-12 md:py-16 lg:border-l lg:border-t-0 lg:py-0 lg:pl-6 lg:pr-0 ">
+                                    <a onclick="formularioemail()"
+                                        class="block rounded-full bg-gradient-to-r from-sky-600 to-cyan-400 px-6 py-3 text-center text-white cursor-pointer duration-200 hover:scale-110">
+                                        Contact me</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <script>
-    (() => {
-      const translations = {
-        en: {
-          pageTitle:"Portfolio | LMhdez", pageDescription:"Portfolio of software, web development, games and infrastructure projects.",
-          eyebrow:"Software development portfolio", heroTitle:"Ideas turned into projects.",
-          intro:"A selection of software, web applications, games and infrastructure projects. Each project keeps its own repository and development lifecycle.",
-          navProduction:"Production", navIndependent:"Independent projects", navAcademic:"Academic",
-          productionTitle:"Production", productionIntro:"Projects with real-world use and operational responsibilities.",
-          liveApp:"Live application", nailsDesc:"Web application for managing a nail studio, including services, appointments, authentication and administration.",
-          repoLink:"View repository →", infraOps:"Infrastructure & operations", mcDesc:"Multilingual portal and operations platform for a Minecraft server, with protected controls, server status and automation.",
-          platformLink:"View platform →", opsDocs:"Operational documentation", infraDesc:"Inventory, audits, sanitised configurations and runbooks for the Azure/VM infrastructure.", infraLink:"View infrastructure →",
-          independentTitle:"Independent projects", independentIntro:"Applications and experiments developed outside a production context.",
-          infoWebsite:"Information website", aviationDesc:"A multi-page static website focused on aviation information.", webTool:"Web tool",
-          budgetDesc:"A step-by-step estimator for indicative website and mobile application project costs.", webGame:"Web game",
-          blackjackDesc:"A Blackjack game that runs directly in the browser.", mazeDesc:"A maze game with keyboard and on-screen controls.",
-          webApp:"Web application", calculatorDesc:"A browser calculator with keyboard support and mathematical expression evaluation.",
-          apiFrontend:"API & frontend", pokedexDesc:"A Pokémon lookup interface powered by the PokéAPI.",
-          academicTitle:"Academic projects", academicIntro:"Coursework and exercises developed during my studies.",
-          moviesDesc:"Frontend to explore films, view details and reviews, and manage favourites.",
-          pharmacyTitle:"Pharmacy Management", pharmacyDesc:"Console application for managing users, medicines and orders.",
-          agentsTitle:"Multi-agent Simulation", agentsDesc:"Simulation of exploring and collecting agents in an environment with resources and obstacles.",
-          quizzesDesc:"Interactive quiz template with different question modes.", exercisesArchive:"Exercises & archive",
-          programasDesc:"A collection of exercises, coursework and small projects from different subjects.", footer:"Personal portfolio"
-        },
-        pt: {
-          pageTitle:"Portefólio | LMhdez", pageDescription:"Portefólio de projetos de software, desenvolvimento web, jogos e infraestrutura.",
-          eyebrow:"Portefólio de desenvolvimento", heroTitle:"Ideias transformadas em projetos.",
-          intro:"Uma seleção de projetos de software, aplicações web, jogos e infraestrutura. Cada projeto mantém o seu próprio repositório e ciclo de desenvolvimento.",
-          navProduction:"Produção", navIndependent:"Projetos independentes", navAcademic:"Académicos",
-          productionTitle:"Produção", productionIntro:"Projetos com utilização real e responsabilidades de operação.",
-          liveApp:"Aplicação em produção", nailsDesc:"Aplicação web para gestão de um estúdio de unhas, com serviços, marcações, autenticação e administração.",
-          repoLink:"Ver repositório →", infraOps:"Infraestrutura e operação", mcDesc:"Portal multilingue e plataforma operacional para um servidor Minecraft, com controlos protegidos, estado do servidor e automação.",
-          platformLink:"Ver plataforma →", opsDocs:"Documentação operacional", infraDesc:"Inventário, auditorias, configurações sanitizadas e procedimentos operacionais da infraestrutura Azure/VM.", infraLink:"Ver infraestrutura →",
-          independentTitle:"Projetos independentes", independentIntro:"Aplicações e experiências desenvolvidas fora de um contexto de produção.",
-          infoWebsite:"Website informativo", aviationDesc:"Website estático com várias páginas, dedicado à informação aeronáutica.", webTool:"Ferramenta web",
-          budgetDesc:"Estimador por etapas dos custos indicativos de projetos de websites e aplicações móveis.", webGame:"Jogo web",
-          blackjackDesc:"Jogo de Blackjack executado diretamente no navegador.", mazeDesc:"Jogo de labirinto com controlos por teclado e no ecrã.",
-          webApp:"Aplicação web", calculatorDesc:"Calculadora no navegador com suporte para teclado e avaliação de expressões matemáticas.",
-          apiFrontend:"API e frontend", pokedexDesc:"Interface de pesquisa Pokémon alimentada pela PokéAPI.",
-          academicTitle:"Projetos académicos", academicIntro:"Trabalhos e exercícios desenvolvidos durante a formação.",
-          moviesDesc:"Frontend para explorar filmes, consultar detalhes e avaliações e gerir favoritos.",
-          pharmacyTitle:"Gestão de Farmácia", pharmacyDesc:"Aplicação de consola para gestão de utilizadores, medicamentos e encomendas.",
-          agentsTitle:"Simulação Multiagente", agentsDesc:"Simulação de agentes exploradores e coletores num ambiente com recursos e obstáculos.",
-          quizzesDesc:"Template de quiz interativo com diferentes modos de perguntas.", exercisesArchive:"Exercícios e arquivo",
-          programasDesc:"Repositório de exercícios, trabalhos e pequenos projetos de várias unidades curriculares.", footer:"Portefólio pessoal"
-        },
-        es: {
-          pageTitle:"Portafolio | LMhdez", pageDescription:"Portafolio de proyectos de software, desarrollo web, juegos e infraestructura.",
-          eyebrow:"Portafolio de desarrollo", heroTitle:"Ideas convertidas en proyectos.",
-          intro:"Una selección de proyectos de software, aplicaciones web, juegos e infraestructura. Cada proyecto mantiene su propio repositorio y ciclo de desarrollo.",
-          navProduction:"Producción", navIndependent:"Proyectos independientes", navAcademic:"Académicos",
-          productionTitle:"Producción", productionIntro:"Proyectos con uso real y responsabilidades operativas.",
-          liveApp:"Aplicación en producción", nailsDesc:"Aplicación web para gestionar un estudio de uñas, con servicios, citas, autenticación y administración.",
-          repoLink:"Ver repositorio →", infraOps:"Infraestructura y operaciones", mcDesc:"Portal multilingüe y plataforma operativa para un servidor Minecraft, con controles protegidos, estado del servidor y automatización.",
-          platformLink:"Ver plataforma →", opsDocs:"Documentación operativa", infraDesc:"Inventario, auditorías, configuraciones saneadas y procedimientos operativos de la infraestructura Azure/VM.", infraLink:"Ver infraestructura →",
-          independentTitle:"Proyectos independientes", independentIntro:"Aplicaciones y experimentos desarrollados fuera de un entorno de producción.",
-          infoWebsite:"Sitio web informativo", aviationDesc:"Sitio web estático de varias páginas dedicado a la información aeronáutica.", webTool:"Herramienta web",
-          budgetDesc:"Estimador por etapas de los costes orientativos de proyectos web y aplicaciones móviles.", webGame:"Juego web",
-          blackjackDesc:"Juego de Blackjack que se ejecuta directamente en el navegador.", mazeDesc:"Juego de laberinto con controles de teclado y en pantalla.",
-          webApp:"Aplicación web", calculatorDesc:"Calculadora en el navegador con soporte de teclado y evaluación de expresiones matemáticas.",
-          apiFrontend:"API y frontend", pokedexDesc:"Interfaz de consulta Pokémon basada en PokéAPI.",
-          academicTitle:"Proyectos académicos", academicIntro:"Trabajos y ejercicios desarrollados durante mis estudios.",
-          moviesDesc:"Frontend para explorar películas, consultar detalles y reseñas y gestionar favoritos.",
-          pharmacyTitle:"Gestión de Farmacia", pharmacyDesc:"Aplicación de consola para gestionar usuarios, medicamentos y pedidos.",
-          agentsTitle:"Simulación multiagente", agentsDesc:"Simulación de agentes exploradores y recolectores en un entorno con recursos y obstáculos.",
-          quizzesDesc:"Plantilla de cuestionario interactivo con diferentes modos de preguntas.", exercisesArchive:"Ejercicios y archivo",
-          programasDesc:"Colección de ejercicios, trabajos y pequeños proyectos de distintas asignaturas.", footer:"Portafolio personal"
-        }
-      };
+    <main class="m-auto max-w-screen-xl bg-neutral-800 text-neutral-300 pb-10">
+        <div class="ml-10 mr-10 pt-32 lg:mt-0 lg:pt-0 md:grid grid-cols-2 gap-10 ">
+            <div>
+                <figure class="flex items-center justify-center ml-11 mb-10">
+                    <img src="https://raw.githubusercontent.com/LMhdez/portfolio/first-import/eu.png" alt="" />
+                </figure>
+            </div>
 
-      const buttons = document.querySelectorAll("[data-lang]");
-      const supported = Object.keys(translations);
-      function applyLanguage(language) {
-        const lang = supported.includes(language) ? language : "en";
-        const dictionary = translations[lang];
-        document.documentElement.lang = lang === "pt" ? "pt-PT" : lang;
-        document.title = dictionary.pageTitle;
-        document.querySelector('meta[name="description"]').content = dictionary.pageDescription;
-        document.querySelectorAll("[data-i18n]").forEach(element => {
-          const key = element.dataset.i18n;
-          if (Object.prototype.hasOwnProperty.call(dictionary, key)) element.textContent = dictionary[key];
+
+
+
+            <div class="flex justify-center items-center pt-10">
+                <div class="flex flex-col text-align">
+                    <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ">— Software developer —</p>
+                    <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Programming is learning,
+                        experimenting, making
+                        mistakes, correcting and evolving.</p>
+
+                    <br />
+
+                    <div class="flex justify-center items-center">
+                        <a href="CVdeloitte.pdf" download><button type="button" class="button">
+
+                                <span class="button__text" style="font-size: 20px;">Download CV</span>
+                                <span class="button__icon"><svg class="svg" data-name="Layer 2"
+                                        id="bdd05811-e15d-428c-bb53-8661459f9307" viewBox="0 0 35 35"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
+                                        </path>
+                                        <path
+                                            d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z">
+                                        </path>
+                                        <path
+                                            d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
+                                        </path>
+                                    </svg></span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="mt-10 mb-10">
+                <h2 class="font-bold  text-3xl mb-4" id="aboutme">About me</h2>
+                <p>Hi, I'm Luis Mario. I am Portuguese, born in Venezuela. I immigrated to Portugal along with my parents and sister in 2019. I completed my high school education in Soure (Agrupamento de Escolas Martinho Arias), where I have been living since I arrived in this country. Due to my birthplace, I speak Spanish, Portuguese, and English (intermediate). I am passionate about computing and would like to further my education in this field to pursue a professional career in the future.</p>
+            </div>
+
+            <div class="flex justify-center items-center">
+                <div>
+                    <div
+                        class="group relative flex max-w-40 flex-col items-center overflow-hidden rounded-xl bg-black p-4 text-center shadow-xl transition-all duration-500 hover:shadow-2xl">
+                        <div class="text-gray-500 transition-all group-hover:scale-105">
+                            <figure class="h-16 w-16" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                                fill="none">
+                                <img src="https://media.tenor.com/RcX3hUY425kAAAAi/toothless-dragon-toothless.gif"
+                                    alt="" srcset="" />
+                            </figure>
+                        </div>
+                        <div class="transition-all delay-200 duration-500 group-hover:pb-10">
+                            <h2 class="font-semibold text-blue-500">Luis Mario</h2>
+                            <h3 class="text-sm text-gray-500">@senior_developer</h3>
+                        </div>
+                        <div
+                            class="absolute -bottom-full flex w-full items-center justify-evenly gap-2 transition-all delay-200 duration-500 group-hover:bottom-3">
+                            <div
+                                class="flex gap-3 rounded-full bg-gray-700 p-1 text-2xl text-white shadow-sm transition-all delay-200 duration-500 hover:p-2">
+                                <a class="transition-all delay-200 duration-500 hover:scale-110"
+                                    href="https://github.com/LMhdez" target="_blank">
+                                    <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 1024 1024">
+                                        <path
+                                            d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="transition-all delay-200 duration-500 hover:scale-110"
+                                    href="mailto:a2023135575@alunos.estgoh.ipc.pt">
+                                    <svg width="1em" height="1em" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <path d="M22 6l-10 7L2 6"></path>
+                                    </svg>
+                                </a>
+                                <a class="transition-all delay-200 duration-500 hover:scale-110"
+                                    href="https://www.linkedin.com/in/luis-mario-hernández/" target="_blank">
+                                    <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 960 1000">
+                                        <path
+                                            d="M480 20c133.333 0 246.667 46.667 340 140s140 206.667 140 340c0 132-46.667 245-140 339S613.333 980 480 980c-132 0-245-47-339-141S0 632 0 500c0-133.333 47-246.667 141-340S348 20 480 20M362 698V386h-96v312h96m-48-352c34.667 0 52-16 52-48s-17.333-48-52-48c-14.667 0-27 4.667-37 14s-15 20.667-15 34c0 32 17.333 48 52 48m404 352V514c0-44-10.333-77.667-31-101s-47.667-35-81-35c-44 0-76 16.667-96 50h-2l-6-42h-84c1.333 18.667 2 52 2 100v212h98V518c0-12 1.333-20 4-24 8-25.333 24.667-38 50-38 32 0 48 22.667 48 68v174h98">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-2 mt-10">
+                <h2 class="text-neutral-100 font-bold  text-3xl mb-4">Skills</h2>
+                <div class=" flex flex-wrap justify-around items-end space-y-10">
+
+
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+                        <img src="https://www.marinedatascience.co/img/software/logo_python.png">
+
+
+                    </figure>
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+                    </figure>
+
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://logos-download.com/wp-content/uploads/2017/07/HTML5_badge.png">
+                    </figure>
+                    <figure class="max-w-24 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://raw.githubusercontent.com/LMhdez/portfolio/first-import/css.png" style="height: 96px;">
+                    </figure>
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://pngimg.com/uploads/letter_c/letter_c_PNG22.png">
+                    </figure>
+
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img src="https://pngimg.com/uploads/mysql/mysql_PNG23.png">
+                    </figure>
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img
+                            src="https://brandlogos.net/wp-content/uploads/2022/05/figma-logo_brandlogos.net_6n1pb-512x512.png">
+                    </figure>
+                    <figure class="max-w-24 min-h-20 cursor-pointer duration-200 hover:scale-125 active:scale-10">
+
+                        <img
+                            src="outsystems.png">
+                    </figure>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class=" mt-10 ml-11 mb-10" id="projects">
+            <p class="text-2xl mb-10">— Curious about what I've done?</p>
+
+
+<p class="text-3xl inline">Then let me show you my</p>
+<h2 class="text-blue-500 font-bold font-serif text-3xl inline ">projects</h2>
+
+
+        </div>
+
+
+        <div class="flex flex-wrap justify-around items-end space-y-10 " style="max-width: 70%; margin: auto auto">
+
+            <div class="flex justify-center items-center">
+                <div class="card">
+                    <div class="card-info" style="background-image: url(https://raw.githubusercontent.com/LMhdez/portfolio/first-import/minesweeper.png); background-size:cover; ">
+                        <p class="title bg-neutral-900">Minesweeper in C</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="flex justify-center items-center">
+
+                <div class="card">
+                    <div class="card-info" style="background-image: url(agenda.png);background-size:cover; ">
+                        <p class="title bg-neutral-900" style="text-align: center;">Personal phone book in python</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+
+                <a href="https://raw.githubusercontent.com/LMhdez/portfolio/first-import/diagrama.drawio.png">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(diagrama.drawio.png); background-size:cover;background-position: center;">
+                            <p class="title bg-neutral-900" style="text-align: center;">Database for Coimbra forum in
+                                sql
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="flex justify-center items-center">
+                <a href="avioes/avioes.html">
+                    <div class="card">
+                        <div class="card-info" style="background-image: url(fpaero.png); background-size:cover">
+                            <p class="title bg-neutral-900" style="text-align: center;">Website for FPA</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+                <a
+                    href="https://www.figma.com/proto/nb1o9AuH8N5u7rp3HdTIND/Concertix-Trabalho-de-IU-(1)?type=design&t=U4hnyAim36b0YJrq-1&scaling=scale-down&page-id=0%3A1&node-id=1-6&mode=design">
+                    <div class="card">
+                        <div class="card-info" style="background-image: url(concertix.png); background-size:cover;">
+                            <p class="title bg-neutral-900" style="text-align: center;">Concertix app (figma prototype)
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+
+            <div class="flex justify-center items-center">
+                <a
+                    href="https://www.figma.com/proto/Vux5BB4UzBpUIGIso5924N/sumos?type=design&node-id=1-3&t=X7GsFkVB215dTOPL-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(pennyjuice.png); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">Pennyjuice website (figma
+                                prototype)
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+                <div class="card">
+                    <div class="card-info"
+                        style="background-image: url(https://pluspng.com/img-png/python-logo-png-open-2000.png); background-size:cover;background-position: center; ">
+                        <p class="title bg-neutral-900" style="text-align: center;">Python program for validating
+                            applications</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+
+                <div class="card">
+                    <div class="card-info"
+                        style="background-image: url(https://pluspng.com/img-png/python-logo-png-open-2000.png); background-size:cover;background-position: center; ">
+                        <p class="title bg-neutral-900" style="text-align: center;">Python program that calculates the
+                            areas of regular polygons</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center items-center">
+
+                <a href="laberinto/laberinto.html">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(https://raw.githubusercontent.com/LMhdez/portfolio/first-import/laberinto.PNG); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">Thematic maze game using JS</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="calculadora/calculadora.html">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(https://raw.githubusercontent.com/LMhdez/portfolio/first-import/calculator.PNG); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">Functional calculator using
+                                HTML, CSS and JS</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="blackjack/blackjack.html">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(https://raw.githubusercontent.com/LMhdez/portfolio/first-import/blackjack.png); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">BlackJack game using
+                                HTML, CSS and JS</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="pokedex/pokedex.html">
+                    <div class="card">
+                        <div class="card-info"
+                            style="background-image: url(https://raw.githubusercontent.com/LMhdez/portfolio/first-import/pokedex.png); background-size:cover;background-position: center; ">
+                            <p class="title bg-neutral-900" style="text-align: center;">Pokedex using API</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- <div class=" mt-10 ml-11" id="services">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-10">— Got a project brewing in that brilliant mind? </p>
+
+
+            <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Let's uncover how I can sprinkle some magic on it and make it shine!</p>
+
+            <a href="budget.html">
+                <button class="continue-application mt-4 ">
+                    <div>
+                        <div class="pencil"></div>
+                        <div class="folder">
+                            <div class="top">
+                                <svg viewBox="0 0 24 27">
+                                    <path
+                                        d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="paper"></div>
+                        </div>
+                    </div>
+                    Estimate project
+                </button>
+            </a>
+        </div> -->
+
+
+        <form class="colorful-form fixed z-30" id="formulariof"
+            onsubmit="event.preventDefault(); enviaremailqualquer();">
+            <button class="close-button hover:scale-150 " onclick="fecharFormulario()">x</button>
+            <div class="form-group">
+                <label class="form-label">Name:</label>
+                <input required placeholder="Enter your name" class="form-input" type="text" id="nome">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Subject:</label> <input required placeholder="Enter the subject"
+                    class="form-input" name="Subject" id="subject" type="text">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Message:</label> <textarea required placeholder="Enter your message"
+                    class="form-input" name="message" id="message" aria-required="true"></textarea>
+            </div>
+
+            <button class="form-button" type="submit">Send Email</button>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer class="bg-neutral-900 text-neutral-400 text-center pt-1 pb-1 ">
+        <p>Copyright © Luis Hernández - 2024</p>
+
+        <button>
+            <a href="#inicio" class=" bg-neutral-800 ">^</a>
+        </button>
+    </footer>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = document.querySelectorAll('.peer-checked\\:hamburger ~ .fixed');
+
+            menuItems.forEach(function (menuItem) {
+                menuItem.addEventListener('click', function () {
+                    const hamburgerCheckbox = document.getElementById('hamburger');
+                    if (hamburgerCheckbox.checked) {
+                        hamburgerCheckbox.checked = false;
+                    }
+                });
+            });
         });
-        buttons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.lang === lang)));
-        try { localStorage.setItem("portfolio-language", lang); } catch (_) {}
-      }
-
-      buttons.forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.lang)));
-      let initialLanguage = "en";
-      try {
-        const saved = localStorage.getItem("portfolio-language");
-        if (supported.includes(saved)) initialLanguage = saved;
-        else {
-          const browserLanguage = (navigator.language || "en").slice(0, 2).toLowerCase();
-          if (supported.includes(browserLanguage)) initialLanguage = browserLanguage;
-        }
-      } catch (_) {}
-      applyLanguage(initialLanguage);
-    })();
-  </script>
+    </script>
 </body>
+
 </html>
