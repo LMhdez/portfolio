@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portefólio de projetos de desenvolvimento web, software e infraestrutura.">
+  <meta name="theme-color" content="#101827">
+  <title>Portefólio | LMhdez</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b1220; --panel:#131e30; --text:#edf3fb; --muted:#a9b8ca; --accent:#65d6c4; --line:#26364b; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:linear-gradient(160deg,#111d31 0%,var(--bg) 48%); color:var(--text); font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:inherit; }
+    .wrap { width:min(1080px,calc(100% - 40px)); margin:auto; }
+    header { padding:72px 0 54px; border-bottom:1px solid var(--line); }
+    .eyebrow { color:var(--accent); font-size:.82rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { max-width:780px; margin:12px 0; font-size:clamp(2.5rem,7vw,5rem); line-height:1.03; letter-spacing:-.055em; }
+    .intro { max-width:680px; color:var(--muted); font-size:1.12rem; }
+    nav { display:flex; flex-wrap:wrap; gap:18px; margin-top:28px; }
+    nav a { color:var(--accent); text-decoration:none; font-weight:650; }
+    main { padding:42px 0 72px; }
+    section { margin:0 0 48px; }
+    h2 { margin:0 0 8px; font-size:1.7rem; letter-spacing:-.025em; }
+    .section-intro { margin:0 0 22px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:16px; }
+    .card { display:flex; flex-direction:column; min-height:210px; padding:22px; background:var(--panel); border:1px solid var(--line); border-radius:16px; }
+    .tag { color:var(--accent); font-size:.76rem; font-weight:750; letter-spacing:.1em; text-transform:uppercase; }
+    h3 { margin:8px 0; font-size:1.22rem; }
+    .card p { margin:0 0 18px; color:var(--muted); }
+    .card a { margin-top:auto; width:fit-content; color:var(--accent); font-weight:700; text-decoration:none; }
+    .card a:hover, nav a:hover { text-decoration:underline; }
+    footer { padding:24px 0 36px; border-top:1px solid var(--line); color:var(--muted); }
+    footer a { color:var(--accent); text-decoration:none; }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">Portefólio de desenvolvimento</div>
+      <h1>Ideias transformadas em projetos.</h1>
+      <p class="intro">Um espaço para apresentar projetos de software, aplicações web, jogos e infraestrutura. Os projetos mantêm os seus próprios repositórios e ciclos de desenvolvimento.</p>
+      <nav aria-label="Navegação principal">
+        <a href="#producao">Produção</a>
+        <a href="#independentes">Projetos independentes</a>
+        <a href="#academicos">Académicos</a>
+        <a href="https://github.com/LMhdez">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="producao">
+      <h2>Produção</h2>
+      <p class="section-intro">Projetos com utilização real e responsabilidades de operação.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="tag">Aplicação em produção</div>
+          <h3>Studio Sara Nails</h3>
+          <p>Aplicação web para gestão de um estúdio de unhas, com serviços, agenda, autenticação e área de administração.</p>
+          <a href="https://github.com/LMhdez/StudioSaraNails">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">Infraestrutura e operação</div>
+          <h3>MC Server Platform</h3>
+          <p>Portal multilingue e plataforma operacional para um servidor Minecraft, com controlos protegidos, estado do servidor e automação.</p>
+          <a href="https://github.com/LMhdez/mc-start">Ver plataforma →</a>
+        </article>
+        <article class="card">
+          <div class="tag">Documentação operacional</div>
+          <h3>MC Server Infrastructure</h3>
+          <p>Inventário, auditorias, configurações sanitizadas e runbooks da infraestrutura Azure/VM.</p>
+          <a href="https://github.com/LMhdez/mc-server-infrastructure">Ver infraestrutura →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="independentes">
+      <h2>Projetos independentes</h2>
+      <p class="section-intro">Aplicações e experiências desenvolvidas fora de um contexto de produção.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="tag">Website informativo</div>
+          <h3>Aviation Website</h3>
+          <p>Website estático, com várias páginas, dedicado à informação aeronáutica.</p>
+          <a href="https://github.com/LMhdez/aviation-website">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">Ferramenta web</div>
+          <h3>Budget Calculator</h3>
+          <p>Estimador por etapas para custos indicativos de projetos de websites e aplicações móveis.</p>
+          <a href="https://github.com/LMhdez/budget-calculator">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">Jogo web</div>
+          <h3>Blackjack</h3>
+          <p>Implementação de Blackjack executada diretamente no navegador.</p>
+          <a href="https://github.com/LMhdez/blackjack">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">Jogo web</div>
+          <h3>Maze Game</h3>
+          <p>Jogo de labirinto com controlos por teclado e interface.</p>
+          <a href="https://github.com/LMhdez/maze-game">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">Aplicação web</div>
+          <h3>Calculator</h3>
+          <p>Calculadora no navegador com suporte para teclado e avaliação de expressões.</p>
+          <a href="https://github.com/LMhdez/calculator">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">API e frontend</div>
+          <h3>Pokédex</h3>
+          <p>Interface de pesquisa Pokémon alimentada pela PokéAPI.</p>
+          <a href="https://github.com/LMhdez/pokedex">Ver repositório →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="academicos">
+      <h2>Projetos académicos</h2>
+      <p class="section-intro">Trabalhos e exercícios desenvolvidos durante a formação.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="tag">React · Vite</div>
+          <h3>Movies React</h3>
+          <p>Frontend para explorar filmes, consultar detalhes, avaliações e favoritos.</p>
+          <a href="https://github.com/LMhdez/moviesReact">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">Java · POO</div>
+          <h3>Gestão de Farmácia</h3>
+          <p>Aplicação de consola para gestão de utilizadores, medicamentos e encomendas.</p>
+          <a href="https://github.com/LMhdez/projetoPOO">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">NetLogo · Inteligência Artificial</div>
+          <h3>Simulação Multiagente</h3>
+          <p>Simulação de agentes exploradores e coletores num ambiente com recursos e obstáculos.</p>
+          <a href="https://github.com/LMhdez/ProjetoIIA">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">HTML · CSS · JavaScript</div>
+          <h3>Quizzes</h3>
+          <p>Template de quiz interativo com diferentes modos de perguntas.</p>
+          <a href="https://github.com/LMhdez/Quizzes">Ver repositório →</a>
+        </article>
+        <article class="card">
+          <div class="tag">Exercícios e arquivo</div>
+          <h3>Programas</h3>
+          <p>Repositório de exercícios, trabalhos e pequenos projetos de várias unidades curriculares.</p>
+          <a href="https://github.com/LMhdez/programas">Ver repositório →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Portefólio pessoal · <a href="https://github.com/LMhdez">GitHub @LMhdez</a></div>
+  </footer>
+</body>
+</html>
